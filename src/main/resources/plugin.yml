@@ -1,0 +1,26 @@
+name: DBSMPEconomy
+main: com.dbsmp.economy.DBSMPEconomy
+version: 1.0.0
+author: DBSMP
+description: Starter economy, shop GUI, kits, and property purchases for Paper 1.8.8
+commands:
+  money:
+    description: Check your DBSMP balance
+    usage: /money [player]
+    aliases: [bal, balance]
+  pay:
+    description: Pay another online player
+    usage: /pay <player> <amount>
+  dbshop:
+    description: Open the DBSMP village shop
+    usage: /dbshop
+  dbproperty:
+    description: Buy a virtual property or view your properties
+    usage: /dbproperty <cottage|village|large|mansion|plot|list>
+  dbsmpsetmoney:
+    description: Admin command to set a player's balance
+    usage: /dbsmpsetmoney <player> <amount>
+permissions:
+  dbsmpeconomy.admin:
+    description: Manage DBSMP economy balances
+    default: op
