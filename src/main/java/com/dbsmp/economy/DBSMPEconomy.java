@@ -539,4 +539,22 @@ public class DBSMPEconomy extends JavaPlugin implements Listener {
 
         return false;
     }
-}
+    // Allows DBSMPTrade to access the existing money system.
+    public double getPlayerBalance(Player player) {
+        return balance(player);
+    }
+
+    public boolean withdrawPlayerMoney(Player player, double amount) {
+        if (amount <= 0 || balance(player) < amount) {
+            return false;
+        }
+
+        setBalance(player, balance(player) - amount);
+        return true;
+    }
+
+    public void depositPlayerMoney(Player player, double amount) {
+        if (amount > 0) {
+            setBalance(player, balance(player) + amount);
+        }
+    }
