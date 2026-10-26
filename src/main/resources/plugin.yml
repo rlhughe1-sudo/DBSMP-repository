@@ -1,24 +1,26 @@
-
-name: DBSMPTrade
-main: com.dbsmp.trade.DBSMPTrade
+name: DBSMPEconomy
+main: com.dbsmp.economy.DBSMPEconomy
 version: 1.0.0
 author: DBSMP
-description: Trading and selling system for Paper 1.8.8
-softdepend:
-  - Vault
-  - DBSMPEconomy
+description: Starter economy, shop GUI, kits, and property purchases for Paper 1.8.8
 commands:
-  trade:
-    description: Trade with another player
-    usage: /trade <player|accept|cancel|money|gui>
-  sell:
-    description: Sell items to the server
-    usage: /sell <hand|all|prices>
-  shop:
-    description: Open the DBSMP server shop
-    usage: /shop
+  money:
+    description: Check your DBSMP balance
+    usage: /money [player]
+    aliases: [bal, balance]
+  pay:
+    description: Pay another online player
+    usage: /pay <player> <amount>
+  dbshop:
+    description: Open the DBSMP village shop
+    usage: /dbshop
+  dbproperty:
+    description: Buy a virtual property or view your properties
+    usage: /dbproperty <cottage|village|large|mansion|plot|list>
+  dbsmpsetmoney:
+    description: Admin command to set a player's balance
+    usage: /dbsmpsetmoney <player> <amount>
 permissions:
-  dbsmptrade.use:
-    default: true
-  dbsmptrade.admin:
+  dbsmpeconomy.admin:
+    description: Manage DBSMP economy balances
     default: op
