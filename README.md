@@ -1,4 +1,4 @@
-DBSMP Economy — Paper 1.8.8 starter plugin
+Economy — Paper 1.8.8 starter plugin
 ==========================================
 
 Included:
